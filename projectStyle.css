@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: monospace, arial, helvetica;
 }
 
-html{
+html {
   min-height: 100%;
   background: linear-gradient( 45deg,
       #7424f3,
@@ -15,21 +15,21 @@ html{
     );
 }
 
-body{
+body {
   margin:auto; 
   width: 80%;
   padding: 10px;
 }
 
 /*Text Properties*/
-h1{
+h1 {
   text-align: center;
   font-size: 40px;
   color: #8600b3;
   font-weight: bold;
 }
 
-p{
+p {
   text-align:left;
   font-size:15px;
   color: #000;
@@ -37,7 +37,7 @@ p{
 }
 
 /*Header Properties*/
-header{
+header {
   display:block; 
   clear:both; 
   height:50px;
@@ -53,7 +53,7 @@ header{
 
 
 /* Navigational bar Properties */
-nav{
+nav {
   margin:10px 0; 
   height:100%;
   background-color: black;
@@ -63,7 +63,7 @@ nav{
   align-items: center;
 }
 
-nav ul{
+nav ul {
   list-style-type: none; 
   margin: 0;
   padding: 0; 
@@ -91,12 +91,12 @@ nav li a:hover {
   color: black;
 }
 
-.active{
+.active {
   background-color: #8600b3;
 }
 
 /*Main section Properties*/
-main{
+main {
   padding:10px;
   height:100%; 
   border-radius: 5px;
@@ -104,7 +104,7 @@ main{
   border: 0.5px black solid;
 }
 
-#area1{
+#area1 {
   margin:15px;
   padding:20px;
   background-color:#fff;
@@ -113,24 +113,24 @@ main{
   min-height: 150px;
 }
 
-#area1 h1{
+#area1 h1 {
   font-size: 30px;
 }
 
-.logo{
+.logo {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.logo img{
+.logo img {
   padding: 5px;
   height: 100px;
   width: 100px;
 }
 
 /*Form Properties*/
-input[type="text"], input[type="password"], input[type="email"]{
+input[type="text"], input[type="password"], input[type="email"] {
   width:50%;
   margin-bottom: 10px;
   padding: 15px 5px 5px 5px;
@@ -143,7 +143,7 @@ input[type="text"], input[type="password"], input[type="email"]{
   transition: 0.3s all;
 }
 
-input[type="number"]{
+input[type="number"] {
   width:4%;
   margin-bottom: 10px;
   padding: 15px 5px 5px 5px;
@@ -156,7 +156,7 @@ input[type="number"]{
   transition: 0.3s all;
 }
 
-input[type="submit"]{
+input[type="submit"] {
   float: right;
   position: relative;
   padding: 5px;
@@ -168,14 +168,14 @@ input[type="submit"]{
   0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-input[type="submit"]:hover, input[type="checkbox"]:hover{
+input[type="submit"]:hover, input[type="checkbox"]:hover {
   background: rgb(211, 211, 211);
   box-shadow: 0 0 5px #a871ff, 0 0 10px #a871ff, 0 0 15px #a871ff, 0 0 20px #a871ff;
   opacity: 0.9;
   cursor: pointer;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   position: relative;
   padding: 5px;
   border-radius: 5px;
@@ -184,33 +184,33 @@ input[type="checkbox"]{
   border: 0.5px black solid;
 }
 
-input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="email"]:focus{
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="email"]:focus {
   border-bottom: 2px solid #be00fd;
 }
 
-form p{
+form p {
   float: left;
   padding-right: 10px;
 }
 
 /*Table Properties*/
-table{
+table {
   border-collapse: collapse;
   text-align: center;
 }
 
-table, th, td{
+table, th, td {
   border: 1px solid #000;
   padding: 5px;
   font-size: 15px
 }
 
-th{
+th {
   font-style: italic;
 }
 
 /*Footer Properties*/
-footer{
+footer {
   margin:10px 0; 
   padding:10px; 
   clear:both; 
@@ -222,77 +222,77 @@ footer{
   justify-content: space-around;
 }
 
-footer ul{
+footer ul {
   list-style: none;
   text-align: center;
   margin-top: 5px;
   font-size: 12px;
 }
 
-footer h2{
+footer h2 {
   font-size: 20px;	
   text-align: center;
 }
 
-.app-logo{
+.app-logo {
   cursor: pointer;
   margin-top: 10px;
 }
 
-.app-logo img{
+.app-logo img {
   height: 40px;
   width: 120px;
 }
 
-.col1{
+.col1 {
   float: left;
   text-align: center;
   flex-basis: 40%;
 }
 
-.col2{
+.col2 {
   float: left;
   flex-basis: 20%;
 }
 
-.col3{
+.col3 {
   flex-basis: 20%;
 }
 
-.fb:hover{
+.fb:hover {
   color: #003db8;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.tw:hover{
+.tw:hover {
   color: #1DA1F2;
   cursor: pointer;
   text-decoration: underline;   
 }
 
-.in:hover{
+.in:hover {
   color: #ae0eee;
   cursor: pointer; 
   text-decoration: underline;  
 }
 
-.yt:hover{
+.yt:hover {
   color: #FF0000;
   cursor: pointer; 
   text-decoration: underline;  
 }
 
 /* media query for less than 1200px */
-@media screen and (max-width:1200px){
+@media screen and (max-width:1200px) {
 
-  nav ul{
+  nav ul {
 	  display: flex;
 	  justify-content: space-evenly;
       align-items: center;	
 	}
 	
-	nav li a{
+	nav li a {
 	  width: 80px;
 	  font-size: 12px;
 	  padding: 14px 16px;
@@ -301,51 +301,51 @@ footer h2{
 }
 
 /* media query for less than 900px */
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) {
 	
-	#area1 h1{
+	#area1 h1 {
 	  font-size: 20px;
 	}
 
-	h1{
+	h1 {
 	  font-size: 30px;
 	  padding: 5px;
 	}
 
-	p{
+	p {
 	  font-size: 12px;
 	  text-align: center;	  
 	}
 	
-	footer h2{
+	footer h2 {
 	  font-size: 16px;	
 	}
 	
-	footer ul{
+	footer ul {
 	  font-size: 11px;	
 	}
 	
-	.logo img{
+	.logo img {
 	  padding: 5px;
 	  height: 50px;
 	  width: 50px;
 	}
 	
-	.app-logo img{
+	.app-logo img {
 	  height: 35px;
 	  width: 90px;
 	}
 	
-	input[type="text"], input[type="password"], input[type="email"], input[type="checkbox"], input[type="submit"]{
+	input[type="text"], input[type="password"], input[type="email"], input[type="checkbox"], input[type="submit"] {
 	  font-size: 12px;
 	}
 	
-	input[type="number"]{
+	input[type="number"] {
 	  font-size: 12px;
 	  width: 7%;
 	}
 	
-	nav li a{
+	nav li a {
 	  width: 65px;
 	  font-size: 10px;
       padding: 14px 8px;
@@ -355,26 +355,26 @@ footer h2{
 }
 
 /* media query for less than 650px */
-@media screen and (max-width:650px){
+@media screen and (max-width:650px) {
 
-  footer{
+  footer {
       height: 120px;
   }
 
-  footer h2{
+  footer h2 {
 	  font-size: 14px;	
 	}
 	
-	footer ul{
+	footer ul {
 	  font-size: 10px;	
 	}
 
-  .app-logo img{
+  .app-logo img {
 	  height: 35px;
 	  width: 80px;
 	}
 
-	nav li a{
+	nav li a {
 	  width: 50px;
 	  font-size: 8px;
       padding: 12px 7px;
