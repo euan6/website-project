@@ -6,7 +6,7 @@
         // If the session variable userLogin does not exist then create one.
         if (!isset($_SESSION['userLogin'])) {
             $_SESSION['userLogin'] = False ;   
-            }
+        }
     }
 ?>
 
@@ -53,17 +53,17 @@
 				//else display HTML form to let a user login
 				} else {
 					echo '<p>Use the form below to log in to your account to access the website.</p>
-				<div class="addform">
-					<form action="checkLogin.php" method="POST">              
-						<p>Username:</p>
-						<input type="text" name="username" maxlength="20" placeholder="Please enter your username here" autocomplete="off" required>
-						<br><br>
-						<p>Password:</p>
-						<input type="password" name="password" maxlength="100" placeholder="Please enter your password here" autocomplete="off" id="pass" required>
-						<input type="checkbox" onclick="hideFunction()">			  
-						<input type="submit" value="Submit">             
-					</form>
-				</div>';
+							<div class="addform">
+								<form action="checkLogin.php" method="POST">              
+									<p>Username:</p>
+									<input type="text" name="username" maxlength="20" placeholder="Please enter your username here" autocomplete="off" required>
+									<br><br>
+									<p>Password:</p>
+									<input type="password" name="password" maxlength="100" placeholder="Please enter your password here" autocomplete="off" id="pass" required>
+									<input type="checkbox" onclick="hideFunction()">			  
+									<input type="submit" value="Submit">             
+								</form>
+							</div>';
 				}
 				?>
 
