@@ -1,5 +1,5 @@
 <?php
-// Start the session
+	// Start the session
     if(session_status() !== PHP_SESSION_ACTIVE)
     {
         session_start();
@@ -43,26 +43,26 @@
 			<h1>Add Reviews</h1>
 
 			<?php
-			//if a user is logged in then display content
-			if ($_SESSION['userLogin'] == true){
-			echo '<p>Use the form below to write and submit your own review.</p>
-				      <div class="addform">
-						  <form action="AddReview2.php" method="POST">
-							  <p>Review Language:</p>
-							  <input type="text" name="reviewLanguage" maxlength="20" placeholder="Please enter your review language here" autocomplete="off" required>
-							  <br><br>
-							  <p>Review Text:</p>
-							  <input type="text" name="reviewText" maxlength="250" placeholder="Please enter your review text here" autocomplete="off" required>
-							  <br><br>
-							  <p>Review Rating:</p>
-							  <input type="number" name="reviewRating" min="1" max="5" placeholder="1" autocomplete="off" required>
-							  <input type="submit" value="Submit">             
-						  </form>
-					  </div>';
-			//else display error message saying you must be logged in
-			} else {
-				echo '<p>You must be logged in to view this content!</p>';
-			}
+				//if a user is logged in then display content
+				if ($_SESSION['userLogin'] == true){
+				echo '<p>Use the form below to write and submit your own review.</p>
+						<div class="addform">
+							<form action="AddReview2.php" method="POST">
+								<p>Review Language:</p>
+								<input type="text" name="reviewLanguage" maxlength="20" placeholder="Please enter your review language here" autocomplete="off" required>
+								<br><br>
+								<p>Review Text:</p>
+								<input type="text" name="reviewText" maxlength="250" placeholder="Please enter your review text here" autocomplete="off" required>
+								<br><br>
+								<p>Review Rating:</p>
+								<input type="number" name="reviewRating" min="1" max="5" placeholder="1" autocomplete="off" required>
+								<input type="submit" value="Submit">             
+							</form>
+						</div>';
+				//else display error message saying you must be logged in
+				} else {
+					echo '<p>You must be logged in to view this content!</p>';
+				}
 			?>
 
 		</div>
