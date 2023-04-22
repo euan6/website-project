@@ -5,5 +5,5 @@
 		session_destroy();
 		include 'logIn.php';
 		die();
-		}
+	}
 ?>
