@@ -1,12 +1,12 @@
 <?php
-// Start the session
+	// Start the session
     if(session_status() !== PHP_SESSION_ACTIVE)
     {
         session_start();
         // If the session variable userLogin does not exist then create one.
         if (!isset($_SESSION['userLogin'])) {
             $_SESSION['userLogin'] = False ;   
-            }
+        }
     }
 ?>
 
@@ -43,41 +43,40 @@
 			<h1>Sign Up</h1>
 
 				<?php
-				$username = 'root';
-				$password = '';
-				$dbname = 'project';
-				$servername = '127.0.0.1';
-				$conn = mysqli_connect($servername, $username, $password, $dbname);
-				//establish connection to database
-				if (!$conn){
-				die("Connection Failed"); 
-				}
+					$username = 'root';
+					$password = '';
+					$dbname = 'project';
+					$servername = '127.0.0.1';
+					$conn = mysqli_connect($servername, $username, $password, $dbname);
+					//establish connection to database
+					if (!$conn){
+						die("Connection Failed"); 
+					}
 
-				//get username and password from HTML form
-				$user = $_POST['username'];
-				$pass = $_POST['password'];
+					//get username and password from HTML form
+					$user = $_POST['username'];
+					$pass = $_POST['password'];
 
-				//setup and execute SQL query
-				$sql = "SELECT username, password FROM userdetails WHERE username = '$user' AND password = '$pass'";
-				$queryResult = mysqli_query($conn, $sql);
-				$numRows = mysqli_num_rows($queryResult);
+					//setup and execute SQL query
+					$sql = "SELECT username, password FROM userdetails WHERE username = '$user' AND password = '$pass'";
+					$queryResult = mysqli_query($conn, $sql);
+					$numRows = mysqli_num_rows($queryResult);
 
-				//if no records are found with the username and password entered display error message and back button
-				if($numRows == 0){
-				echo "<p>Your account details are incorrect, please try again!</p>";
-				//takes you back to the login page
-				echo '<form action="logIn.php" method="POST">
-								<input type="submit" value="Back">
-							</form>';
-				//else start session and redirect to the home page
-				} else {
-				$_SESSION['userLogin'] = true;
-				$_SESSION['user2'] = $user;
-				$_SESSION['pass2'] = $pass;
-				header("Location: home.php");
-				}
-
-				mysqli_close($conn);
+					//if no records are found with the username and password entered display error message and back button
+					if($numRows == 0){
+						echo "<p>Your account details are incorrect, please try again!</p>";
+						//takes you back to the login page
+						echo '<form action="logIn.php" method="POST">
+										<input type="submit" value="Back">
+									</form>';
+						//else start session and redirect to the home page
+					} else {
+						$_SESSION['userLogin'] = true;
+						$_SESSION['user2'] = $user;
+						$_SESSION['pass2'] = $pass;
+						header("Location: home.php");
+					}
+					mysqli_close($conn);
 				?>     
 
 		</div>
