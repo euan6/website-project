@@ -31,36 +31,36 @@
 			<h1>Add Reviews</h1>
 
 				<?php
-				$username = 'root';
-				$password = '';
-				$dbname = 'project';
-				$servername = '127.0.0.1';
-				$conn = mysqli_connect($servername, $username, $password, $dbname);
-				//establish connection to database
-				if (!$conn){
-				die("Connection Failed"); 
-				}
+					$username = 'root';
+					$password = '';
+					$dbname = 'project';
+					$servername = '127.0.0.1';
+					$conn = mysqli_connect($servername, $username, $password, $dbname);
+					//establish connection to database
+					if (!$conn){
+						die("Connection Failed"); 
+					}
 
-				//get review language, text and rating from HTML form
-				$reviewLanguage = $_POST['reviewLanguage'];
-				$reviewText = $_POST['reviewText'];
-				$reviewRating = $_POST['reviewRating'];
+					//get review language, text and rating from HTML form
+					$reviewLanguage = $_POST['reviewLanguage'];
+					$reviewText = $_POST['reviewText'];
+					$reviewRating = $_POST['reviewRating'];
 
-				//setup and execute SQL query
-				$sql = "INSERT INTO reviewdetails (reviewLanguage, reviewText, reviewRating) VALUES ('$reviewLanguage', '$reviewText', '$reviewRating');";
-				$queryResult = mysqli_query($conn, $sql);
+					//setup and execute SQL query
+					$sql = "INSERT INTO reviewdetails (reviewLanguage, reviewText, reviewRating) VALUES ('$reviewLanguage', '$reviewText', '$reviewRating');";
+					$queryResult = mysqli_query($conn, $sql);
 
-				//if review is added then display button to go back to add another
-				if($queryResult) {
-				echo '<p>Thank you for adding a new review. It has been successfully submitted.</p>';
-				echo '<form action="AddReview.php" method="POST">
-					  	  <input type="submit" value="Back">
-					  </form>';
-				//else give error message saying it was not added
-				} else {
-				echo '<p>Your review has not been added to the database. Please try again.</p>';
-				}
-				mysqli_close($conn);
+					//if review is added then display button to go back to add another
+					if($queryResult) {
+					echo '<p>Thank you for adding a new review. It has been successfully submitted.</p>';
+					echo '<form action="AddReview.php" method="POST">
+							<input type="submit" value="Back">
+						  </form>';
+					//else give error message saying it was not added
+					} else {
+						echo '<p>Your review has not been added to the database. Please try again.</p>';
+					}
+					mysqli_close($conn);
 				?>     
 
 		</div>
