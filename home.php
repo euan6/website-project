@@ -1,12 +1,12 @@
 <?php
-// Start the session
+	// Start the session
     if(session_status() !== PHP_SESSION_ACTIVE)
     {
         session_start();
         // If the session variable userLogin does not exist then create one.
         if (!isset($_SESSION['userLogin'])) {
             $_SESSION['userLogin'] = False ;   
-            }
+        }
     }
 ?>
 
@@ -45,17 +45,17 @@
 				<?php
 						//if a user is logged in then display content
 						if ($_SESSION['userLogin'] == true){
-						echo '<p>Welcome! This website stores the most up to date and reliable programming language reviews, which lets experts of the language give their views and opinions on what the language is like!</p>
-						<p>We are very proud of the quality of our service and of our reputation. </p>
-						<p>Please refer to the navigation bar located at the top to easily find your way about the website as this contains links to important pages. Otherwise refer to the footer at the very bottom of the page for any other useful links, or to download our app which is not on the app store and the google play store.</p>
-						<div class="logo">
-							<img src="images/python.png" alt="python.png">
-							<img src="images/php.png" alt="php.png">
-							<img src="images/javascript.png" alt="javascript.png">
-							<img src="images/C.png" alt="C#.png">
-							<img src="images/java.png" alt="java.png">		
-						</div>';
-						//else display error message saying you must be logged in
+							echo '<p>Welcome! This website stores the most up to date and reliable programming language reviews, which lets experts of the language give their views and opinions on what the language is like!</p>
+							<p>We are very proud of the quality of our service and of our reputation. </p>
+							<p>Please refer to the navigation bar located at the top to easily find your way about the website as this contains links to important pages. Otherwise refer to the footer at the very bottom of the page for any other useful links, or to download our app which is not on the app store and the google play store.</p>
+							<div class="logo">
+								<img src="images/python.png" alt="python.png">
+								<img src="images/php.png" alt="php.png">
+								<img src="images/javascript.png" alt="javascript.png">
+								<img src="images/C.png" alt="C#.png">
+								<img src="images/java.png" alt="java.png">		
+							</div>';
+							//else display error message saying you must be logged in
 						} else {
 							echo '<p>You must be logged in to view this content!</p>';
 						}
