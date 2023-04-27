@@ -45,6 +45,7 @@
 				<?php
 				//if a user is logged in then display content
 				if ($_SESSION['userLogin'] == true){
+				//form lets users search for a specific review
 				echo '<p>Use the search bar below to search for reviews that have been submitted.</p>
 					  <p>Hint: You can also enter a rating between 1 and 5 to display every review with that rating.</p>
 					  <div class="addform">
