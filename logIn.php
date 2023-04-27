@@ -47,6 +47,7 @@
 				if ($_SESSION['userLogin'] == true){
 					echo '<p>Welcome back! You are currently logged in as user:</p>';
 					echo $_SESSION['user2'];
+					//display form for user to log out
 					echo '<form action="logOut.php" method="POST">
 									<input type="submit" value="Log Out">
 								</form>';

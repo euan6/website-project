@@ -45,6 +45,7 @@
 			<?php
 				//if a user is logged in then display content
 				if ($_SESSION['userLogin'] == true){
+				//form lets users submit a review
 				echo '<p>Use the form below to write and submit your own review.</p>
 						<div class="addform">
 							<form action="AddReview2.php" method="POST">
